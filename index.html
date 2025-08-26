@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tayza - Download Mobile App | Google Play & App Store</title>
+    <meta
+      name="description"
+      content="Download Tayza mobile app from Google Play Store and Apple App Store. Experience the best features on iOS and Android."
+    />
+    <meta
+      name="keywords"
+      content="Tayza app, mobile app, download app, Google Play, App Store, iOS, Android"
+    />
+    <meta name="author" content="Tayza" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Tayza - Download Mobile App" />
+    <meta
+      property="og:description"
+      content="Download Tayza mobile app from Google Play Store and Apple App Store."
+    />
+    <meta property="og:image" content="./Images/Tayza r blue 1.png" />
+    <meta property="og:url" content="https://tayza.com" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./Images/Tayza icon b.png" />
+    <link rel="apple-touch-icon" href="./Images/Tayza icon b.png" />
+
+    <!-- Preload critical resources -->
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+      as="style"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "tayza-blue": "#456EFE",
+            },
+            fontFamily: {
+              inter: ["Inter", "sans-serif"],
+              poppins: ["Poppins", "sans-serif"],
+            },
+            container: {
+              center: true,
+              padding: {
+                DEFAULT: '1rem',
+                sm: '2rem',
+                lg: '4rem',
+                xl: '5rem',
+                '2xl': '6rem',
+              },
+            },
+            animation: {
+              'float': 'float 6s ease-in-out infinite',
+              'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'bounce-slow': 'bounce-slow 3s ease-in-out infinite',
+            },
+            keyframes: {
+              float: {
+                '0%, 100%': { transform: 'translateY(0px)' },
+                '50%': { transform: 'translateY(-20px)' },
+              },
+              'bounce-slow': {
+                '0%, 100%': { transform: 'translateY(0px) scale(1)' },
+                '50%': { transform: 'translateY(-10px) scale(1.05)' },
+              }
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .text-gradient {
+        background: linear-gradient(135deg, #456EFE 0%, #8B5CF6 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .hero-bg {
+        background-image: url('./Images/Rectangle 1.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .container-custom {
+        width: 100%;
+        max-width: 1400px;
+        margin: 0 auto;
+        padding-left: clamp(1rem, 5vw, 6rem);
+        padding-right: clamp(1rem, 5vw, 6rem);
+      }
+
+      .btn-hover {
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        transform: translateY(0);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .btn-hover::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+        transition: left 0.6s;
+      }
+
+      .btn-hover:hover::before {
+        left: 100%;
+      }
+
+      .btn-hover:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 12px 40px rgba(69, 110, 254, 0.4);
+      }
+
+      .play-button-hover {
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      .play-button-hover:hover .play-icon {
+        transform: scale(1.15);
+        transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      .phone-float {
+        animation: float 6s ease-in-out infinite;
+      }
+
+      .welcome-badge {
+        background: linear-gradient(135deg, rgba(69, 110, 254, 0.1), rgba(139, 92, 246, 0.05));
+        border: 1px solid rgba(69, 110, 254, 0.2);
+        backdrop-filter: blur(10px);
+      }
+
+      .enhanced-shadow {
+        filter: drop-shadow(0 25px 50px rgba(0, 0, 0, 0.15));
+      }
+
+      .header-glass {
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(20px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      }
+
+      .floating-dot {
+        position: absolute;
+        border-radius: 50%;
+        opacity: 0.6;
+        animation: bounce-slow 3s ease-in-out infinite;
+      }
+
+      .dot-1 {
+        top: 20%;
+        right: 25%;
+        width: 12px;
+        height: 12px;
+        background: #FF6B6B;
+        animation-delay: 0s;
+      }
+
+      .dot-2 {
+        top: 35%;
+        right: 15%;
+        width: 8px;
+        height: 8px;
+        background: #4ECDC4;
+        animation-delay: 1s;
+      }
+
+      .dot-3 {
+        top: 50%;
+        right: 30%;
+        width: 6px;
+        height: 6px;
+        background: #FFE66D;
+        animation-delay: 2s;
+      }
+
+      .dot-4 {
+        bottom: 35%;
+        right: 20%;
+        width: 10px;
+        height: 10px;
+        background: #FF6B6B;
+        animation-delay: 0.5s;
+      }
+
+      .dot-5 {
+        bottom: 20%;
+        right: 35%;
+        width: 14px;
+        height: 14px;
+        background: #FFE66D;
+        animation-delay: 1.5s;
+      }
+
+      .dot-6 {
+        top: 25%;
+        left: 15%;
+        width: 8px;
+        height: 8px;
+        background: #4ECDC4;
+        animation-delay: 2.5s;
+      }
+
+      .dot-7 {
+        bottom: 40%;
+        left: 25%;
+        width: 6px;
+        height: 6px;
+        background: #FF6B6B;
+        animation-delay: 3s;
+      }
+
+      @media (max-width: 1024px) {
+        .floating-dot {
+          display: none;
+        }
+      }
+
+      @keyframes bounce-slow {
+        0%, 100% { 
+          transform: translateY(0px) scale(1);
+          opacity: 0.6;
+        }
+        50% { 
+          transform: translateY(-15px) scale(1.1);
+          opacity: 0.8;
+        }
+      }
+
+      /* Enhanced Responsive Styles */
+      @media (max-width: 640px) {
+        .hero-heading {
+          font-size: 28px !important;
+          line-height: 110% !important;
+        }
+        
+        .hero-subtext {
+          font-size: 16px !important;
+          line-height: 1.5 !important;
+        }
+        
+        .mobile-button-stack {
+          flex-direction: column !important;
+          align-items: stretch !important;
+          gap: 12px !important;
+        }
+        
+        .mobile-full-width {
+          width: 100% !important;
+          min-width: auto !important;
+          justify-content: center !important;
+        }
+      }
+
+      @media (min-width: 641px) and (max-width: 768px) {
+        .hero-heading {
+          font-size: 32px !important;
+          line-height: 115% !important;
+        }
+        
+        .hero-subtext {
+          font-size: 18px !important;
+        }
+      }
+
+      @media (min-width: 769px) and (max-width: 1023px) {
+        .hero-heading {
+          font-size: 36px !important;
+          line-height: 118% !important;
+        }
+        
+        .tablet-phone-mobile {
+          display: block !important;
+          margin-top: 2rem !important;
+          text-align: center !important;
+        }
+        
+        .tablet-phone-mobile img {
+          width: 300px !important;
+          max-width: 80% !important;
+          height: auto !important;
+        }
+      }
+
+      /* Touch-friendly button sizing for mobile */
+      @media (max-width: 640px) {
+        .mobile-touch-button {
+          min-height: 48px !important;
+          padding: 14px 20px !important;
+        }
+        
+        .mobile-play-button {
+          min-height: 48px !important;
+        }
+        
+        .mobile-play-icon {
+          width: 48px !important;
+          height: 48px !important;
+        }
+      }
+    </style>
+  </head>
+  <body class="font-inter bg-white">
+
+    <!-- Header -->
+    <header class="bg-white shadow-sm relative z-50 sticky top-0">
+      <div class="container-custom">
+        <div class="flex justify-between items-center h-16 md:h-20">
+          <!-- Logo Section -->
+          <div class="flex items-center">
+            <img
+              src="./Images/Tayza r blue 1.png"
+              alt="Tayza Logo - Mobile App"
+              class="h-6 sm:h-8 md:h-10 w-auto"
+              loading="eager"
+            />
+          </div>
+
+          <!-- Download Buttons -->
+          <div class="flex items-center gap-2 sm:gap-3">
+            <a
+              href="#"
+              role="button"
+              aria-label="Download Tayza from Google Play Store"
+              class="flex items-center gap-1.5 sm:gap-2 bg-transparent hover:bg-blue-50 focus:bg-blue-50 focus:outline-none focus:ring-2 focus:ring-tayza-blue focus:ring-opacity-50 px-3 sm:px-4 lg:px-5 py-2 sm:py-2.5 rounded-full transition-all duration-300 border border-tayza-blue text-tayza-blue hover:border-blue-600 hover:text-blue-600"
+            >
+              <img
+                src="./Images/Vector.png"
+                alt=""
+                class="w-3.5 h-3.5 sm:w-4 sm:h-4"
+                loading="lazy"
+              />
+              <span class="text-xs sm:text-sm font-medium lg:hidden">Play</span>
+              <span class="text-xs sm:text-sm font-medium hidden lg:inline">Google Play</span>
+            </a>
+
+            <a
+              href="#"
+              role="button"
+              aria-label="Download Tayza from Apple App Store"
+              class="flex items-center gap-1.5 sm:gap-2 bg-transparent hover:bg-blue-50 focus:bg-blue-50 focus:outline-none focus:ring-2 focus:ring-tayza-blue focus:ring-opacity-50 px-3 sm:px-4 lg:px-5 py-2 sm:py-2.5 rounded-full transition-all duration-300 border border-tayza-blue text-tayza-blue hover:border-blue-600 hover:text-blue-600"
+            >
+              <img
+                src="./Images/ic_baseline-apple.png"
+                alt=""
+                class="w-3.5 h-3.5 sm:w-4 sm:h-4"
+                loading="lazy"
+              />
+              <span class="text-xs sm:text-sm font-medium lg:hidden">Store</span>
+              <span class="text-xs sm:text-sm font-medium hidden lg:inline">App Store</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="py-8 sm:py-12 lg:py-16 xl:py-20 relative">
+      <div class="container-custom">
+        <div class="hero-bg rounded-2xl sm:rounded-3xl relative overflow-hidden">
+          <!-- Floating Dots -->
+          <div class="floating-dot dot-1"></div>
+          <div class="floating-dot dot-2"></div>
+          <div class="floating-dot dot-3"></div>
+          <div class="floating-dot dot-4"></div>
+          <div class="floating-dot dot-5"></div>
+          <div class="floating-dot dot-6"></div>
+          <div class="floating-dot dot-7"></div>
+          
+          <div class="flex flex-col lg:flex-row items-center min-h-[500px] sm:min-h-[600px] lg:min-h-[650px] xl:min-h-[700px] px-4 sm:px-6 lg:px-8 xl:px-12 py-8 sm:py-12 lg:py-16 relative z-10 overflow-visible">
+            
+            <!-- Content Section -->
+            <div class="flex-1 w-full lg:w-3/5 max-w-2xl text-left lg:pr-4 lg:pl-4 relative z-20">
+              <!-- Welcome Badge -->
+              <div class="welcome-badge inline-flex items-center px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-sm font-semibold mb-4 sm:mb-6 lg:mb-8 text-tayza-blue font-poppins">
+                <div class="w-2 h-2 bg-tayza-blue rounded-full mr-2 sm:mr-3 animate-pulse"></div>
+                <span class="text-xs sm:text-sm md:text-base font-medium">Welcome to Tayza</span>
+              </div>
+
+              <!-- Main Heading -->
+              <h1 class="hero-heading font-poppins font-semibold text-gray-800 mb-4 sm:mb-6 lg:mb-8" style="font-size: 42px; line-height: 120%; letter-spacing: 0%;">
+                Get Your <span class="text-gradient">Virtual Number</span> &<br>
+                Simplify <span class="text-gradient">Payments</span><br>
+                With Tayza
+              </h1>
+
+              <!-- Subheading -->
+              <p class="hero-subtext font-poppins text-gray-500 mb-6 sm:mb-8 lg:mb-10 leading-relaxed text-lg sm:text-xl max-w-lg font-normal">
+                Tayza offers secure virtual numbers, instant money transfers, and easy bill payments — all in one simple, reliable app.
+              </p>
+
+              <!-- CTA Buttons -->
+              <div class="flex flex-row items-center gap-3 sm:gap-4 md:gap-6 mobile-button-stack">
+                <button class="mobile-touch-button mobile-full-width btn-hover bg-tayza-blue hover:bg-blue-600 text-white px-5 sm:px-6 md:px-7 py-3 sm:py-3.5 font-medium min-w-[130px] sm:min-w-[140px] md:min-w-[160px] text-sm sm:text-base shadow-lg font-poppins" style="border-radius: 25px;">
+                  Get Started
+                </button>
+                
+                <button class="mobile-play-button mobile-full-width play-button-hover flex items-center gap-2 sm:gap-3 text-tayza-blue hover:text-blue-700 font-medium group text-sm sm:text-base md:text-lg font-poppins justify-center sm:justify-start">
+                  <div class="mobile-play-icon play-icon w-10 sm:w-12 h-10 sm:h-12 bg-tayza-blue rounded-full flex items-center justify-center group-hover:bg-blue-700 transition-all duration-300 shadow-md flex-shrink-0">
+                    <svg class="w-4 sm:w-5 h-4 sm:h-5 ml-0.5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M8 5v14l11-7z"/>
+                    </svg>
+                  </div>
+                  <span>How it works</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Phone Image Section with Overflow - Hidden on tablet and shown separately -->
+            <div class="hidden lg:flex flex-1 w-full lg:w-2/5 justify-center lg:justify-end mt-8 lg:mt-0 relative z-30 lg:-ml-32">
+              <div class="relative w-full max-w-sm sm:max-w-md lg:max-w-none lg:w-[450px] xl:w-[500px]">
+                <img 
+                  src="./Images/Col.png" 
+                  alt="Tayza Mobile App Interface" 
+                  class="phone-float enhanced-shadow w-full h-auto relative z-30 transform lg:scale-110 xl:scale-125"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Tablet/Mobile Phone Image - Shown below hero content -->
+        <div class="tablet-phone-mobile lg:hidden mt-6 sm:mt-8 text-center">
+          <img 
+            src="./Images/Col.png" 
+            alt="Tayza Mobile App Interface" 
+            class="phone-float enhanced-shadow mx-auto"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </section>
+    
+
+  </body>
+</html>
